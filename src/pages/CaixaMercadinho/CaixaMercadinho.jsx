@@ -113,17 +113,19 @@ export default function CaixaMercadinho() {
                 <div className="TableModalListProd">
                   <thead>
                     <tr className="Tr">
-                      <th className="Th">Código</th>
-                      <th className="Th">Produto</th>
-                      <th className="Th">Valor</th>
+                      <th className="ThModelListProd">Código</th>
+                      <th className="ThModelListProd">Produto</th>
+                      <th className="ThModelListProd">Valor</th>
                     </tr>
                   </thead>
                   <tbody>
                     {produtos.map((item, index) => (
                       <tr className="Tr" key={index}>
-                        <td className="TdC">{item.codigo}</td>
-                        <td className="Td">{item.produto}</td>
-                        <td className="Td">R$ {item.valor.toFixed(2)}</td>
+                        <td className="TdCModelListProd">{item.codigo}</td>
+                        <td className="TdModelListProd">{item.produto}</td>
+                        <td className="TdModelListProd">
+                          R$ {item.valor.toFixed(2)}
+                        </td>
                       </tr>
                     ))}
                   </tbody>

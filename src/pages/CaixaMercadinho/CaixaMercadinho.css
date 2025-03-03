@@ -29,7 +29,7 @@
   flex-direction: row;
   gap: 20px;
   width: 500px;
-  background: #fff;
+  background: linear-gradient(135deg, #00258a 0%, #0134a0 50%, #0e63ed 100%);
   padding: 20px;
   color: black;
 }
@@ -42,7 +42,7 @@
 .PainelModalAdcProd h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #333;
+  color: #9e9e9e;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin: 2rem 0;
@@ -64,8 +64,7 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
-  gap: 20px;
-  width: 80%;
+  width: 100%;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -74,10 +73,19 @@
 }
 .PainelModalListProd {
   flex: 2;
-  background: #0040992b;
+  background: linear-gradient(135deg, #00258a 0%, #0134a0 50%, #0e63ed 100%);
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.PainelModalListProd h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #9e9e9e;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+  text-align: center;
 }
 .TableModalListProd {
   width: 100%;
@@ -85,6 +93,30 @@
   text-align: left;
   align-items: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.ThModelListProd {
+  border: 1px solid #000000;
+  background: linear-gradient(135deg, #00258a 0%, #0134a0 50%, #0e63ed 100%);
+  width: 1700px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.TdCModelListProd {
+  background-color: #fff;
+  border-bottom: 1px solid #ffffff;
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #000000;
+  font-weight: bold;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.TdModelListProd {
+  background-color: #fff;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #000000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 /* FIM DO MODAL DE LISTA DE PRODUTOS*/
 
@@ -190,6 +222,7 @@
 
 .Th {
   background: #0056b3;
+  border: 1px solid #000;
   width: 1700px;
   color: white;
   padding: 10px;
