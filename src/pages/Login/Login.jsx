@@ -4,10 +4,10 @@ import api from "../../api/api";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import logo from "../../assets/logo.png";
-import './Login.css';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import "./Login.css";
 
 import { Mail, Lock } from "lucide-react";
-
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -29,34 +29,46 @@ export default function Login() {
     } */
   };
 
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className="Container">
-    <div className="Card">
-      <img src={logo} alt="Logo da marca" className="logo" />
-      <div className="InputContainer">
-        <span className="Icon"><Mail size={20} /></span>
-        <input 
-          className="Input"
-          type="email" 
-          placeholder="Email" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)}
-        />
+      <div className="Card">
+        <img src={logo} alt="Logo da marca" className="logo" />
+        <div className="InputContainer">
+          <span className="Icon">
+            <Mail size={20} />
+          </span>
+          <input
+            className="Input"
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="InputContainer">
+          <span className="Icon">
+            <Lock size={20} />
+          </span>
+          <input
+            className="Input"
+            type={showPassword ? "text" : "password"}
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <span
+            className="Icon_Pass"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
+        </div>
+        <button className="Btn" onClick={() => navigate("/caixamercadinho")}>
+          Entrar
+        </button>
       </div>
-      <div className="InputContainer">
-        <span className="Icon"><Lock size={20} /></span>
-        <input 
-          className="Input"
-          type="password" 
-          placeholder="Senha" 
-          value={password} 
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <button className="Btn" onClick={() => navigate("/caixamercadinho")}>
-        Entrar
-      </button>
     </div>
-  </div>
   );
 }
