@@ -2,6 +2,92 @@
   margin: 0;
 }
 
+/* ESTILIZAÇÃO DO MODAL */
+/* CONTAINER DO MODAL */
+.Box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 1px solid #2e00e8;
+  border-radius: 15px;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* MODAL DE ADICIONAL PRODUTO*/
+.ScreenModalAdcProd {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 500px;
+  background: #fff;
+  padding: 20px;
+  color: black;
+}
+.PainelModalAdcProd {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.PainelModalAdcProd h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  text-align: center;
+}
+.InputModalAdcProd {
+  width: 96%;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* FIM DO MODAL DE ADICIONAL PRODUTO*/
+
+/* INICIO DO MODAL DE LISTA DE PRODUTOS*/
+.ScreenModalListProd {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  gap: 20px;
+  width: 80%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.PainelModalListProd {
+  flex: 2;
+  background: #0040992b;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.TableModalListProd {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* FIM DO MODAL DE LISTA DE PRODUTOS*/
+
 .ContainerMerc {
   overflow-y: auto;
   height: 100vh;
@@ -40,13 +126,6 @@
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.RightPanel1 {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .RightPanel {
   flex: 1;
   display: flex;
@@ -82,21 +161,6 @@
   &:focus {
     border-color: #383efa;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-}
-
-.BtnScroll {
-  background-color: #ffffffbc;
-  color: rgb(50, 14, 255);
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #45a049;
   }
 }
 
