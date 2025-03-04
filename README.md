@@ -1,3 +1,4 @@
+<img alt="Img logo" src="./public/logo.png" width="20%">
 <h1 align="center"> MF SALGADOS </h1>
 
 <p align="center">
